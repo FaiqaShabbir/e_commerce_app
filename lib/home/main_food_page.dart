@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../utils/colors.dart';
 import '../widgets/big_text.dart';
@@ -22,6 +19,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
         body: Column(
       children: [
         // ignore: avoid_unnecessary_containers
+        // This container showing the header
         Container(
           child: Container(
             margin: const EdgeInsets.only(top: 45, bottom: 15),
@@ -63,6 +61,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
             ),
           ),
         ),
+        // showing the body
         const FoodPageBody(),
       ],
     ));
