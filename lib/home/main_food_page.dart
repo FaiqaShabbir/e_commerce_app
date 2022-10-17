@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
@@ -15,6 +16,8 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print("Current height is ${MediaQuery.of(context).size.height}");
     return Scaffold(
         body: Column(
       children: [
@@ -23,7 +26,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
         Container(
           child: Container(
             margin: const EdgeInsets.only(top: 45, bottom: 15),
-            padding: const EdgeInsets.only(left: 20, right: 20),
+            padding: EdgeInsets.only(
+                left: Dimensions.width20, right: Dimensions.width20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -49,7 +53,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   height: 45,
                   width: 45,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(Dimensions.radius15),
                     color: AppColors.mainColor,
                   ),
                   child: const Icon(

@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/dimensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class BigText extends StatelessWidget {
@@ -10,7 +11,7 @@ class BigText extends StatelessWidget {
       this.color = const Color(0xFF332d2b),
       required this.text,
       this.overflow = TextOverflow.ellipsis,
-      this.size = 20});
+      this.size = 0});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class BigText extends StatelessWidget {
           fontFamily: 'Roboto',
           color: color,
           fontWeight: FontWeight.w400,
-          fontSize: size),
+          fontSize: size == 0 ? Dimensions.font20 : size),
     );
   }
 }
